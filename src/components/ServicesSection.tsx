@@ -28,7 +28,7 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section className="py-20 bg-gradient-to-b from-white to-[#C4D4A4]">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -38,7 +38,7 @@ const ServicesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Lo que <span className="bg-gradient-romantic bg-clip-text text-transparent">hacemos</span>
+            Lo que hacemos
           </h2>
           <div className="flex items-center justify-center mb-6">
             <motion.div
@@ -106,11 +106,16 @@ const ServicesSection: React.FC = () => {
           className="text-center mt-16"
         >
           <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-romantic text-white px-10 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-purple-500/30 transition-all duration-300"
-          >
-            Descubre todos nuestros servicios
+          whileHover={{ scale: 1.08, y: -3 }}
+          whileTap={{ scale: 0.95 }}
+          className="bbg-gradient-to-r from-[#DBD499] to-[#C4D4A4] 
+                    text-gray-900 px-12 py-4 rounded-full 
+                    font-extrabold text-lg tracking-wide
+                    shadow-2xl hover:shadow-yellow-200/60
+                    border-4 border-white
+                    transition-all duration-300"
+          > 
+            ✨ Descubre todos nuestros servicios
           </motion.button>
         </motion.div>
       </div>

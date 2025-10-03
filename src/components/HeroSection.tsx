@@ -96,11 +96,11 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
           >
-            <span className="block bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
-              Amor
+            <span className="block bg-gradient-to-r from-white  bg-clip-text ">
+              Fieltro
             </span>
             <span className="block bg-gradient-to-r from-pink-100 to-white bg-clip-text text-transparent">
-              Estelar
+              Bonito
             </span>
           </motion.h1>
           
@@ -110,11 +110,9 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="flex items-center justify-center mb-8"
           >
-            <FiHeart className="mr-3 text-pink-200" size={24} />
-            <p className="text-xl md:text-2xl font-light text-pink-100">
-              Imprimimos y personalizamos tus recuerdos 💗
+            <p className="text-xl md:text-2xl font-ligth">
+              Hola Chaparrita como esstaass?
             </p>
-            <FiHeart className="ml-3 text-pink-200" size={24} />
           </motion.div>
         </motion.div>
 
@@ -128,7 +126,7 @@ const HeroSection: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             onClick={handleCatalogClick}
-            className="group bg-white text-amor-purple px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center"
+            className="group bg-brown-300 text-amor-purple px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center"
           >
             <FiCamera className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
             Ver Catálogo Completo

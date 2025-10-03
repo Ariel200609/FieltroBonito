@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'amor': {
+        'fieltro': {
           purple: '#A66CF5',
           pink: '#F571E2', 
           lavender: '#D36CF5',
@@ -17,8 +17,8 @@ export default {
         }
       },
       backgroundImage: {
-        'gradient-romantic': 'linear-gradient(135deg, #A66CF5 0%, #F571E2 25%, #D36CF5 50%, #796CF5 75%, #F56C8E 100%)',
-        'gradient-soft': 'linear-gradient(135deg, #E7BDF5 0%, #D36CF5 50%, #A66CF5 100%)',
+        'gradient-romantic': 'linear-gradient(135deg,#6FA088,#ADC9B8,#C4D4A4,#DBD499',
+        'gradient-soft': 'linear-gradient(135deg,rgb(96, 225, 105) 0%,rgb(58, 116, 46) 50%,rgb(47, 135, 62) 100%)',
       }
     },
   },

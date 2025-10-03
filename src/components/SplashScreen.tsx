@@ -104,7 +104,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            Amor Estelar
+            Fieltro Bonito
           </motion.span>
         </motion.h1>
 

@@ -1,43 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiShoppingBag, FiHeart } from 'react-icons/fi';
+import { FiMenu, FiX, FiHeart, FiFilter } from 'react-icons/fi';
 import { HiSparkles } from 'react-icons/hi';
 import logoAmorEstelar from '../assets/images/logo/logoAmorEstelar.webp';
-import { useCart } from '../context/CartContext';
 
-interface HeaderProps {
-  onCartClick?: () => void;
-}
+interface HeaderProps {}
 
-const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const { getCartItemsCount } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Determinar si el header debe estar visible
+
       if (currentScrollY < 50) {
-        // Siempre visible en la parte superior
         setIsVisible(true);
         setIsScrolled(false);
       } else {
         setIsScrolled(true);
-        
+
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-          // Scrolling hacia abajo - ocultar header
           setIsVisible(false);
-          setIsMenuOpen(false); // Cerrar menú móvil si está abierto
+          setIsMenuOpen(false);
         } else if (currentScrollY < lastScrollY) {
-          // Scrolling hacia arriba - mostrar header
           setIsVisible(true);
         }
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -56,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
   const menuItems = [
     { id: 'hero', label: 'Inicio', icon: <FiHeart size={18} /> },
     { id: 'services', label: 'Servicios', icon: <HiSparkles size={18} /> },
-    { id: 'products', label: 'Productos', icon: <FiShoppingBag size={18} /> },
+    { id: 'products', label: 'Productos', icon: <FiFilter size={18} /> },
     { id: 'contact', label: 'Contacto', icon: <FiHeart size={18} /> },
   ];
 
@@ -64,19 +56,14 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
     <>
       <motion.header
         initial={{ y: -100, opacity: 0 }}
-        animate={{ 
-          y: isVisible ? 0 : -100, 
-          opacity: isVisible ? 1 : 0 
-        }}
-        transition={{ 
+        animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
+        transition={{
           duration: isVisible ? 0.6 : 0.3,
           delay: isVisible && lastScrollY === 0 ? 1.5 : 0,
-          ease: "easeInOut"
+          ease: 'easeInOut'
         }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
+          isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4">
@@ -95,11 +82,9 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
                 transition={{ duration: 0.6 }}
               />
               <div>
-                <h1 className="text-xl font-bold bg-gradient-romantic bg-clip-text text-transparent">
-                  Amor Estelar
-                </h1>
+                <h1 className="text-xxl font-bold">Fieltro Bonito</h1>
                 <p className="text-xs text-gray-600 hidden sm:block">
-                  Personalizamos tus recuerdos 💜
+                  Llevate un recuerdito bonito
                 </p>
               </div>
             </motion.div>
@@ -120,28 +105,8 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
               ))}
             </nav>
 
-            {/* Cart & Mobile Menu */}
+            {/* Mobile Menu */}
             <div className="flex items-center space-x-4">
-              {/* Cart Button */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={onCartClick}
-                className="relative p-3 bg-gradient-to-r from-amor-purple to-amor-pink text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <FiShoppingBag size={20} />
-                {getCartItemsCount() > 0 && (
-                  <motion.span
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold"
-                  >
-                    {getCartItemsCount()}
-                  </motion.span>
-                )}
-              </motion.button>
-
-              {/* Mobile Menu Button */}
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -183,7 +148,7 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
         )}
       </AnimatePresence>
 
-      {/* Spacer for fixed header */}
+      {/* Spacer */}
       <div className="h-20" />
     </>
   );
