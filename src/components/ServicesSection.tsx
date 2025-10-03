@@ -1,28 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiImage, FiPrinter, FiHeart, FiMap } from 'react-icons/fi';
-import { HiSparkles } from 'react-icons/hi';
+import { FiImage, FiPrinter, FiHeart, FiMap,} from 'react-icons/fi';
+import { HiAcademicCap, HiLightBulb, HiShoppingBag, HiSparkles  } from 'react-icons/hi';
 
 const services = [
   {
-    icon: <HiSparkles size={48} />,
-    title: "Diseño Gráfico",
-    description: "Creamos diseños únicos y personalizados que capturan la esencia de tus momentos especiales."
+    icon: <HiLightBulb size={48} />,  
+    title: "2020 / 2021",
+    description: "Nació como una chispa de inspiración en plena pandemia, aprendiendo de tutoriales y explorando ideas."
   },
   {
-    icon: <FiPrinter size={48} />,
-    title: "Impresión Personalizada",
-    description: "Imprimimos tus recuerdos con la más alta calidad en diferentes formatos y materiales."
+    icon: <HiShoppingBag size={48} />, 
+    title: "2022 / 2023",
+    description: "Llegaron las primeras ventas: ferias, pedidos personalizados y los primeros clientes que confiaron en mí."
   },
   {
-    icon: <FiImage size={48} />,
-    title: "Polaroids Personalizadas",
-    description: "Transforma tus fotos favoritas en hermosas polaroids con diseños únicos y románticos."
+    icon: <HiAcademicCap size={48} />, 
+    title: "2024 / 2025",
+    description: "Sigo creciendo a través de cursos, perfeccionando mi técnica y participando en más ferias locales."
   },
   {
-    icon: <FiMap size={48} />,
-    title: "Mapas del Amor",
-    description: "Mapas personalizados que marcan los lugares especiales de tu historia de amor."
+    icon: <HiSparkles size={48} />,  
+    title: "2026",
+    description: "Lo mejor aún está por venir... ¿están listos para lo que se viene?"
   }
 ];
 
@@ -38,7 +38,7 @@ const ServicesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Lo que hacemos
+            Mi historia 
           </h2>
           <div className="flex items-center justify-center mb-6">
             <motion.div
@@ -47,8 +47,8 @@ const ServicesSection: React.FC = () => {
             >
               <FiHeart className="text-amor-pink mr-2" size={24} />
             </motion.div>
-            <p className="text-lg text-gray-600 max-w-2xl">
-              Especializados en crear y personalizar recuerdos únicos que perdurarán para siempre
+            <p className="text-lg text-gray-900 max-w-2xl">
+              Como comenzo este camino?
             </p>
             <motion.div
               animate={{ rotate: -360 }}

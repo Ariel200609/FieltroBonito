@@ -111,7 +111,7 @@ const HeroSection: React.FC = () => {
             className="flex items-center justify-center mb-8"
           >
             <p className="text-xl md:text-2xl font-ligth">
-              Hola Chaparrita como esstaass?
+              Hola rochi cuerno ?
             </p>
           </motion.div>
         </motion.div>

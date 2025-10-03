@@ -30,7 +30,7 @@ const ProductsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-            Nuestros <span className="bg-gradient-romantic bg-clip-text text-transparent">Productos</span>
+            Nuestros Productos
           </h2>
           <div className="flex items-center justify-center mb-8">
             <motion.div animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}>
