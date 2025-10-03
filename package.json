@@ -1,9 +1,9 @@
 {
-  "name": "amorestelar",
+  "name": "fieltrobonito",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ariel.github.io/AmorEstelar",
+  "homepage": "https://ariel.github.io/FieltroBonito",
   "scripts": {
     "dev": "vite --force",
     "build": "tsc -b && vite build",
