@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiImage, FiPrinter, FiHeart, FiMap,} from 'react-icons/fi';
+import {  FiHeart } from 'react-icons/fi';
 import { HiAcademicCap, HiLightBulb, HiShoppingBag, HiSparkles  } from 'react-icons/hi';
 
 const services = [
@@ -48,7 +48,7 @@ const ServicesSection: React.FC = () => {
               <FiHeart className="text-amor-pink mr-2" size={24} />
             </motion.div>
             <p className="text-lg text-gray-900 max-w-2xl">
-              Como comenzo este camino?
+              ¿Cómo comenzó este camino?
             </p>
             <motion.div
               animate={{ rotate: -360 }}
@@ -114,8 +114,10 @@ const ServicesSection: React.FC = () => {
                     shadow-2xl hover:shadow-yellow-200/60
                     border-4 border-white
                     transition-all duration-300"
+          onClick={() => window.open('https://www.instagram.com/fieltrobonito.bb', '_blank')}
           > 
-            ✨ Descubre todos nuestros servicios
+            ✨ Descubre todo sobre Fieltro Bonito
+            
           </motion.button>
         </motion.div>
       </div>

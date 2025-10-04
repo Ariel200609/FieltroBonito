@@ -2,7 +2,7 @@ export interface Product {
   id: number;
   name: string;
   category: 'polaroids' | 'stickers' | 'cuadros' | 'otros';
-  price: number;
+  price?: number;
   image: string;
   description: string;
   featured?: boolean;
@@ -36,7 +36,6 @@ export const products: Product[] = [
     id: 1,
     name: "Cuadro Deco Souvenirs",
     category: "cuadros",
-    price: 9000,
     image: img1,
     description: "SOUVENIRS PERSONALIZADOS DE VIDRIO Y MADERA medida 10x13cm",
     featured: true
@@ -45,7 +44,6 @@ export const products: Product[] = [
     id: 2,
     name: "Cuadro",
     category: "cuadros",
-    price: 8500,
     image: nenita,
     description: "Ideal para souvenires de boda, cumpleaños, etc.",
     featured: true
@@ -54,7 +52,7 @@ export const products: Product[] = [
     id: 3,
     name: "Tu Historia en Fotos",
     category: "cuadros",
-    price: 13500,
+
     image: img3,
     description: "Personaliza tu cuadro con fotos de tus recuerdos"
   },
@@ -62,7 +60,6 @@ export const products: Product[] = [
     id: 4,
     name: "Polaroid Iman-Souvenir,6 unidades",
     category: "polaroids",
-    price: 4800,
     image: img4,
     description: "Se hace precio por mayor!"
   },
@@ -70,7 +67,6 @@ export const products: Product[] = [
     id: 5,
     name: "Cuadro de Madera Barnizada con vidrio",
     category: "cuadros",
-    price: 15000,
     image: img5,
     description: "con frases o simple"
   },
@@ -78,7 +74,6 @@ export const products: Product[] = [
     id: 6,
     name: "Polaroid 8x5, 12 unidades",
     category: "polaroids",
-    price: 4400,
     image: img6,
     description: "Llevando mas cantidad el precio es menor!",
     featured: true
@@ -105,7 +100,6 @@ export const products: Product[] = [
     id: 9,
     name: "Polaroid 10x7 8 unidades",
     category: "polaroids",
-    price: 3950,
     image: img9,
     description: "llevando mas cantidad el precio es menor!"
   },
@@ -113,7 +107,6 @@ export const products: Product[] = [
     id: 10,
     name: "Cuadro Deco",
     category: "cuadros",
-    price: 3500,
     image: nenita,
     description: "totalmente personalizado.ideal para regalar o decorar",
     featured: true
@@ -122,7 +115,6 @@ export const products: Product[] = [
     id: 11,
     name: "BOX",
     category: "otros",
-    price: 12200,
     image: img10,
     description: "caja box rectangular,totalmente personalizable"
   },
@@ -130,7 +122,6 @@ export const products: Product[] = [
     id: 12,
     name: "Cuadro Dia de la Madre",
     category: "cuadros",
-    price: 10000,
     image: mama,
     description: "Regalo del dia de la madre"
   },
@@ -138,7 +129,7 @@ export const products: Product[] = [
     id: 13,
     name: "Cuadro Deco XXL",
     category: "cuadros",
-    price: 15000,
+
     image: img17,
     description: "Cuadro vidrio 4mm de 30x17cm + base de madera"
   },
@@ -148,7 +139,7 @@ export const products: Product[] = [
     id: 14,
     name: "Cuadro Deco XL",
     category: "cuadros",
-    price: 13000,
+
     image: img12,
     description: "Cuadro con el mapa del cielo de tu fecha especial. Tamaño 30x40cm.",
     featured: true
@@ -165,7 +156,6 @@ export const products: Product[] = [
     id: 16,
     name: "kit stickers",
     category: "stickers",
-    price: 4100,
     image: img14,
     description: "plancha a4 de stickers"
   },
@@ -173,7 +163,6 @@ export const products: Product[] = [
     id: 17,
     name: "Calendarios por Mayor",
     category: "otros",
-    price: 300,
     image: img15,
     description: "impresión premium"
   },
@@ -181,7 +170,6 @@ export const products: Product[] = [
     id: 18,
     name: "Porta Retrato Premium",
     category: "otros",
-    price: 0,
     image: img16,
     description: "portaretrato a elección"
   },
@@ -189,7 +177,7 @@ export const products: Product[] = [
     id: 19,
     name: "Cuadro Día del Padre",
     category: "cuadros",
-    price: 10000,
+
     image: img17,
     description: "regala lo mejor para tu papá"
   },
@@ -197,7 +185,6 @@ export const products: Product[] = [
     id: 20,
     name: "Clásicos Todo tipo de medida",
     category: "otros",
-    price: 500,
     image: img18, // Reutilizando primera imagen
     description: "todo tipo de medida!!",
     featured: true
@@ -206,7 +193,7 @@ export const products: Product[] = [
     id: 21,
     name: "Kit emprendedores - Pack de 24 y 35 unidades",
     category: "stickers",
-    price: 3400,
+
     image: img19,
     description: "Stickers redondos de 4 y 4,5 cm de diámetro"
   }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiHeart, FiInstagram, FiMapPin, FiMail, FiMessageCircle } from 'react-icons/fi';
-import { FaFacebook } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi';
 import logoAmorEstelar from '../assets/images/logo/logoAmorEstelar.webp';
 
@@ -12,15 +11,9 @@ const Footer: React.FC = () => {
     {
       name: 'Instagram',
       icon: <FiInstagram size={24} />,
-      url: 'https://instagram.com/amor.estelar.lp', // Instagram real
+      url: 'https://instagram.com/fieltrobonito.bb', // Instagram real
       color: 'hover:text-pink-400'
     },
-    {
-      name: 'Facebook',
-      icon: <FaFacebook size={24} />,
-      url: 'https://facebook.com/amorestelar', // Facebook
-      color: 'hover:text-blue-400'
-    }
   ];
 
   return (
@@ -73,8 +66,8 @@ const Footer: React.FC = () => {
                 className="text-3xl font-bold flex items-center"
                 whileHover={{ scale: 1.02 }}
               >
-                <span className="bg-gradient-romantic bg-clip-text text-transparent">
-                  Amor Estelar
+                <span className="bg-gradient-romantic  bg-clip-text text-white">
+                  Fieltro Bonito
                 </span>
                 <motion.div
                   animate={{ 
@@ -93,13 +86,12 @@ const Footer: React.FC = () => {
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Especializados en diseño gráfico, impresión y personalización de recuerdos. 
-              Transformamos tus momentos más preciados en obras de arte únicas.
+              Artesanía en fieltro de lana pura de oveja, trabajada a mano con amor y dedicación ✨🧵🐑
             </p>
 
             <div className="flex items-center text-gray-400 mb-4">
               <FiMapPin className="mr-2 text-amor-pink" size={18} />
-              <span>Bahía Blanca, zona centro - Pedro Luro</span>
+              <span>Bahía Blanca, Villa Mitre- Buenos Aires</span>
             </div>
 
             <motion.div
@@ -109,13 +101,11 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               className="flex items-center text-gray-300"
             >
-              <FiHeart className="mr-2 text-amor-rose" size={16} />
-              <span className="text-sm">Imprimimos y personalizamos tus recuerdos 💗</span>
-              <FiHeart className="ml-2 text-amor-rose" size={16} />
             </motion.div>
           </motion.div>
 
           {/* Services */}
+          {/*
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -204,7 +194,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <p className="text-gray-400 text-sm">
-                © {currentYear} Amor Estelar. Todos los derechos reservados.
+                © {currentYear} Fieltro Bonito. Todos los derechos reservados.
               </p>
             </div>
             

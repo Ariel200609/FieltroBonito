@@ -36,8 +36,8 @@ const ProductsSection: React.FC = () => {
             <motion.div animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}>
               <FiHeart className="text-amor-pink mr-2" size={24} />
             </motion.div>
-            <p className="text-lg text-gray-600 max-w-3xl">
-              Descubre nuestra colección completa de productos personalizados.
+            <p className="text-xl text-gray-900 max-w-3xl">
+              Descubre nuestros productos.
             </p>
             <motion.div animate={{ rotate: -360 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}>
               <FiHeart className="text-amor-pink ml-2" size={24} />
@@ -53,8 +53,8 @@ const ProductsSection: React.FC = () => {
                 onClick={() => setActiveFilter(filter.key)}
                 className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   activeFilter === filter.key
-                    ? 'bg-gradient-romantic text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:text-gray-800 shadow-md hover:shadow-lg'
+                    ? 'bg-gradient-romantic text-black shadow-lg'
+                    : 'bg- text-black-600 hover:text-black-800 shadow-md hover:shadow-lg'
                 }`}
               >
                 {filter.icon}

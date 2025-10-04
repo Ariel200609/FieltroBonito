@@ -7,7 +7,7 @@ interface Product {
   id: number;
   name: string;
   category: string;
-  price: number;
+  price?: number;
   image: string;
   description: string;
   featured?: boolean;
@@ -183,11 +183,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <p className="text-gray-600 leading-relaxed mb-4">
                   {product.description}
                 </p>
-
                 <div className="flex justify-between items-center mb-6">
-                  <span className="text-3xl font-bold text-amor-purple">
-                    ${product.price}
-                  </span>
                 </div>
               </div>
             </motion.div>

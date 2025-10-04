@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
         transition={{
-          duration: isVisible ? 0.6 : 0.3,
+          duration: isVisible ? 0.2 : 0.1,
           delay: isVisible && lastScrollY === 0 ? 1.5 : 0,
           ease: 'easeInOut'
         }}
