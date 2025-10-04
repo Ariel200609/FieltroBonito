@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: `url(${heroImage})`,
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
         }}
       ></div>
       

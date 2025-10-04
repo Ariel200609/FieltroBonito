@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
+import Image from '../assets/images/talleres/taller1.jpg';
+
 
 const talleres = [
     {
-        imagen: "/talleres/taller1.webp",
+        imagen: Image,
         descripcion: "Taller de fieltro seco: creación de figuras decorativas.",
     },
     {
-        imagen: "/talleres/taller2.webp",
+        imagen: Image,
         descripcion: "Taller infantil: aprendiendo a crear con lana y colores.",
     },
     {
-        imagen: "/talleres/taller3.webp",
+        imagen: Image,
         descripcion: "Workshop avanzado de técnicas de fieltro húmedo.",
     },
     {
-        imagen: "/talleres/taller4.webp",
+        imagen: Image,
         descripcion: "Taller personalizado: proyectos creativos con fieltro.",
     },
 ];
