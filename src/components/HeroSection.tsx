@@ -96,10 +96,10 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
           >
-            <span className="block bg-gradient-to-r from-white  bg-clip-text ">
+            <span translate= "no" className="block bg-gradient-to-r from-white  bg-clip-text ">
               Fieltro
             </span>
-            <span className="block bg-gradient-to-r from-pink-100 to-white bg-clip-text text-transparent">
+            <span translate= "no" className ="block bg-gradient-to-r from-pink-100 to-white bg-clip-text text-transparent">
               Bonito
             </span>
           </motion.h1>

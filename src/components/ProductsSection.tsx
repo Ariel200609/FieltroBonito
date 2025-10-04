@@ -1,36 +1,35 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiFilter, FiHeart } from 'react-icons/fi';
-import { HiSparkles } from 'react-icons/hi';
+import { FiHeart } from 'react-icons/fi';
 import { products } from '../data/products';
 import ProductCard from './ProductCard';
 
 const ProductsSection: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | string>('all');
+  const [activeFilter] = useState<'all' | string>('all');
 
   const getFilteredProducts = () => {
     if (activeFilter === 'all') return products;
     return products.filter(product => product.category === activeFilter);
   };
 
-  const getProductsByCategory = (category: string) => {
+  /*const getProductsByCategory = (category: string) => {
     return products.filter(product => product.category === category);
-  };
+  };*/
 
-  const filters = [
+  /*const filters = [
     { key: 'all', label: 'Todos los productos', icon: <FiHeart size={20} />, count: products.length },
     { key: 'polaroids', label: 'Polaroids', icon: <FiHeart size={20} />, count: getProductsByCategory('polaroids').length },
     { key: 'stickers', label: 'Stickers', icon: <HiSparkles size={20} />, count: getProductsByCategory('stickers').length },
     { key: 'cuadros', label: 'Cuadros', icon: <FiFilter size={20} />, count: getProductsByCategory('cuadros').length },
     { key: 'otros', label: 'Otros', icon: <FiHeart size={20} />, count: getProductsByCategory('otros').length },
-  ];
+  ];*/
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
-      <div className="max-w-7xl mx-auto px-4">
+      {/*<div className="max-w-7xl mx-auto px-4">*/}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-            Nuestros Productos
+            Manualidades
           </h2>
           <div className="flex items-center justify-center mb-8">
             <motion.div animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}>
@@ -45,6 +44,7 @@ const ProductsSection: React.FC = () => {
           </div>
 
           {/* Filtros */}
+          {/*
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {filters.map((filter) => (
               <motion.button
@@ -65,7 +65,7 @@ const ProductsSection: React.FC = () => {
               </motion.button>
             ))}
           </div>
-        </div>
+        </div>*/}
 
         {/* Grid de productos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

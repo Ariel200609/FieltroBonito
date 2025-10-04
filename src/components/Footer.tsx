@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+    <footer className="bg-[#6FA088] text-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(8)].map((_, i) => (
@@ -89,8 +89,8 @@ const Footer: React.FC = () => {
               Artesanía en fieltro de lana pura de oveja, trabajada a mano con amor y dedicación ✨🧵🐑
             </p>
 
-            <div className="flex items-center text-gray-400 mb-4">
-              <FiMapPin className="mr-2 text-amor-pink" size={18} />
+            <div className="flex items-center text-gray-900 mb-4">
+              <FiMapPin className="mr-2" size={18} />
               <span>Bahía Blanca, Villa Mitre- Buenos Aires</span>
             </div>
 
@@ -149,14 +149,14 @@ const Footer: React.FC = () => {
             <div className="space-y-4 mb-6">
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-center text-gray-400 hover:text-green-400 cursor-pointer transition-all duration-300"
+                className="flex items-center text-gray-900 hover:text-green-400 cursor-pointer transition-all duration-300"
               >
                 <FiMessageCircle className="mr-3" size={18} />
                 <span>WhatsApp</span>
               </motion.div>
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-center text-gray-400 hover:text-blue-400 cursor-pointer transition-all duration-300"
+                className="flex items-center text-gray-900 hover:text-blue-400 cursor-pointer transition-all duration-300"
               >
                 <FiMail className="mr-3" size={18} />
                 <span>Gmail</span>
@@ -174,7 +174,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`text-gray-400 ${social.color} transition-all duration-300`}
+                  className={`text-gray-900 ${social.color} transition-all duration-300`}
                 >
                   {social.icon}
                 </motion.a>
@@ -193,7 +193,7 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-900 text-sm">
                 © {currentYear} Fieltro Bonito. Todos los derechos reservados.
               </p>
             </div>
