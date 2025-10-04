@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import ProductsSection from './components/ProductsSection';
 import ContactSection from './components/ContactSection';
+import CarruselTalleres from './components/carruselTalleres';
 import Footer from './components/Footer';
 
 const AppContent: React.FC = () => {
@@ -34,6 +35,9 @@ const AppContent: React.FC = () => {
           </div>
           <div id="products">
             <ProductsSection />
+          </div>
+          <div>
+            <CarruselTalleres/>
           </div>
           <div id="contact">
             <ContactSection />
