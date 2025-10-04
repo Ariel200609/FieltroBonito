@@ -4,18 +4,18 @@ import { FiMail, FiMessageCircle, FiMapPin, FiHeart } from 'react-icons/fi';
 import { HiSparkles } from 'react-icons/hi';
 
 const ContactSection: React.FC = () => {
-  const whatsappNumber = "29214277746"; // Número real de WhatsApp
-  const emailAddress = "contacto@amorestelar.com"; // Email del emprendimiento
+  const whatsappNumber = "5492914277746"; // Número real de WhatsApp
+  const emailAddress = "Disgla1971@gmail.com"; // Email del emprendimiento
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre sus servicios de diseño y personalización 💗");
+    const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre Fieltro-bonito");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
 
   const handleEmailClick = () => {
-    const subject = encodeURIComponent("Consulta sobre servicios - Amor Estelar");
-    const body = encodeURIComponent("¡Hola! Me gustaría conocer más información sobre sus servicios de diseño gráfico y personalización de recuerdos.\n\n¡Espero su respuesta!\n\nSaludos 💗");
+    const subject = encodeURIComponent("Consulta sobre servicios - Fieltro Bonito");
+    const body = encodeURIComponent("¡Hola! Me gustaría conocer más información sobre sus servicios.\n\n¡Espero su respuesta!\n\nSaludos 💗");
     window.open(`mailto:${emailAddress}?subject=${subject}&body=${body}`, '_blank');
   };
 
