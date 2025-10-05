@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
   };
 
   const handleContactClick = () => {
-    const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre sus servicios de diseño y personalización 💗");
+    const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre Fieltro-Bonito 💗");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 

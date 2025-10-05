@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Image from '../assets/images/talleres/taller1.jpg';
-
+import Image from '../assets/images/talleres/f1 (1).jpg';
+import Image2 from '../assets/images/talleres/f1 (2).jpg';
+import Image3 from '../assets/images/talleres/f1 (3).jpg';
+import Image4 from '../assets/images/talleres/f1 (19).jpg';
 
 const talleres = [
     {
@@ -8,15 +10,15 @@ const talleres = [
         descripcion: "Taller de fieltro seco: creación de figuras decorativas.",
     },
     {
-        imagen: Image,
+        imagen: Image2,
         descripcion: "Taller infantil: aprendiendo a crear con lana y colores.",
     },
     {
-        imagen: Image,
+        imagen: Image3,
         descripcion: "Workshop avanzado de técnicas de fieltro húmedo.",
     },
     {
-        imagen: Image,
+        imagen: Image4,
         descripcion: "Taller personalizado: proyectos creativos con fieltro.",
     },
 ];
@@ -51,7 +53,7 @@ const CarruselTalleres: React.FC = () => {
             <img
                 src={talleres[index].imagen}
                 alt={`Taller ${index + 1}`}
-                className="w-full h-[400px] object-cover transition-all duration-700"
+                className="w-full h-[250px] sm:h-[350px] md:h-[350px] lg:h-[450px] xl:h-[500px] object-cover object-center transition-all duration-700"
             />
 
             {/* Botones de navegación */}

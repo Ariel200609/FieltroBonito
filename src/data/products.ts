@@ -9,24 +9,7 @@ export interface Product {
 }
 
 // Importar imágenes de productos
-import img1 from '../assets/images/productos/CuadroDecoSouvenirs.webp';
-import img3 from '../assets/images/productos/c.webp';
-import img4 from '../assets/images/productos/1.webp';
-import img6 from '../assets/images/productos/3.webp';
-import img7 from '../assets/images/productos/4.webp';
-import img8 from '../assets/images/productos/5.webp';
-import img9 from '../assets/images/productos/6.webp';
-import img10 from '../assets/images/productos/7.webp';
-import nenita from '../assets/images/productos/nenita.webp';
-import img12 from '../assets/images/productos/9.webp';
-import img13 from '../assets/images/productos/10.webp';
-import img14 from '../assets/images/productos/11.webp';
-import img15 from '../assets/images/productos/12.webp';
-import img16 from '../assets/images/productos/13.webp';
-import img17 from '../assets/images/productos/14.webp';
-import img18 from '../assets/images/productos/15.webp';
-import mama from '../assets/images/productos/mama.webp';
-import img19 from '../assets/images/productos/stickers.webp';
+import img1 from '../assets/images/productos/f1 (10).jpg';
 
 
 export const products: Product[] = [
@@ -41,20 +24,20 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Cuadro",
-    image: nenita,
+    image: img1,
     description: "Ideal para souvenires de boda, cumpleaños, etc.",
     featured: true
   },
   {
     id: 3,
     name: "Tu Historia en Fotos",
-    image: img3,
+    image: img1,
     description: "Personaliza tu cuadro con fotos de tus recuerdos"
   },
   {
     id: 4,
     name: "Polaroid Iman-Souvenir,6 unidades",
-    image: img4,
+    image: img1,
     description: "Se hace precio por mayor!"
   },
   {
@@ -66,14 +49,14 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Polaroid 8x5, 12 unidades",
-    image: img6,
+    image: img1,
     description: "Llevando mas cantidad el precio es menor!",
     featured: true
   },
   {
     id: 7,
     name: "Polaroid clásicas 10x10",
-    image: img7,
+    image: img1,
     description: "llevando mas cantidad el precio es menor!"
   },
 
@@ -81,38 +64,38 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Polar scuare 9x8 6 unidades",
-    image: img8,
+    image: img1,
     description: "6 unidades,consultar por combos!."
   },
   {
     id: 9,
     name: "Polaroid 10x7 8 unidades",
-    image: img9,
+    image: img1,
     description: "llevando mas cantidad el precio es menor!"
   },
   {
     id: 10,
     name: "Cuadro Deco",
-    image: nenita,
+    image: img1,
     description: "totalmente personalizado.ideal para regalar o decorar",
     featured: true
   },
   {
     id: 11,
     name: "BOX",
-    image: img10,
+    image: img1,
     description: "caja box rectangular,totalmente personalizable"
   },
   {
     id: 12,
     name: "Cuadro Dia de la Madre",
-    image: mama,
+    image: img1,
     description: "Regalo del dia de la madre"
   },
   {
     id: 13,
     name: "Cuadro Deco XXL",
-    image: img17,
+    image: img1,
     description: "Cuadro vidrio 4mm de 30x17cm + base de madera"
   },
 
@@ -120,51 +103,51 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Cuadro Deco XL",
-    image: img12,
+    image: img1,
     description: "Cuadro con el mapa del cielo de tu fecha especial. Tamaño 30x40cm.",
     featured: true
   },
   {
     id: 15,
     name: "Porta Retrato 13x18",
-    image: img13,
+    image: img1,
     description: "plantilla personalizada o foto a elección"
   },
   {
     id: 16,
     name: "kit stickers",
-    image: img14,
+    image: img1,
     description: "plancha a4 de stickers"
   },
   {
     id: 17,
     name: "Calendarios por Mayor",
-    image: img15,
+    image: img1,
     description: "impresión premium"
   },
   {
     id: 18,
     name: "Porta Retrato Premium",
-    image: img16,
+    image: img1,
     description: "portaretrato a elección"
   },
   {
     id: 19,
     name: "Cuadro Día del Padre",
-    image: img17,
+    image: img1,
     description: "regala lo mejor para tu papá"
   },
   {
     id: 20,
     name: "Clásicos Todo tipo de medida",
-    image: img18, // Reutilizando primera imagen
+    image: img1, // Reutilizando primera imagen
     description: "todo tipo de medida!!",
     featured: true
   },
   {
     id: 21,
     name: "Kit emprendedores - Pack de 24 y 35 unidades",
-    image: img19,
+    image: img1,
     description: "Stickers redondos de 4 y 4,5 cm de diámetro"
   }
 ];
