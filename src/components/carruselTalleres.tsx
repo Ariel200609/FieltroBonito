@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
-import Image from '../assets/images/talleres/f1 (1).jpg';
-import Image2 from '../assets/images/talleres/f1 (2).jpg';
-import Image3 from '../assets/images/talleres/f1 (3).jpg';
-import Image4 from '../assets/images/talleres/f1 (19).jpg';
+import Image from '../assets/images/talleres/TALLER BORDADO SOBRE FOTOS (1).jpg';
+import Image2 from '../assets/images/talleres/TALLER BORDADO SOBRE FOTOS.jpg';
+import Image3 from '../assets/images/talleres/TALLER DIA DE LA MADRE.jpg';
+import Image4 from '../assets/images/talleres/TALLER PUNTOS SIMPLES.jpg';
 
 const talleres = [
     {
         imagen: Image,
-        descripcion: "Taller de fieltro seco: creación de figuras decorativas.",
+        descripcion: "Taller de bordado sobre fotos.",
     },
     {
         imagen: Image2,
-        descripcion: "Taller infantil: aprendiendo a crear con lana y colores.",
+        descripcion: "Taller de bordado sobre fotos.",
     },
     {
         imagen: Image3,
-        descripcion: "Workshop avanzado de técnicas de fieltro húmedo.",
+        descripcion: "Taller del dia de la madre.",
     },
     {
         imagen: Image4,
-        descripcion: "Taller personalizado: proyectos creativos con fieltro.",
+        descripcion: "Taller puntos simples.",
     },
 ];
 

@@ -9,147 +9,128 @@ export interface Product {
 }
 
 // Importar imágenes de productos
-import img1 from '../assets/images/productos/f1 (10).jpg';
-
+import img1 from '../assets/images/productos/AROS.jpg';
+import img2 from '../assets/images/productos/Aros1.jpg';
+import img3 from '../assets/images/productos/Gato1.jpg';
+import img4 from '../assets/images/productos/Gatos.jpg';
+import img5 from '../assets/images/productos/Miniatura.jpg';
+import img7 from '../assets/images/productos/RATON  (1).jpg';
+import img8 from '../assets/images/productos/RATON  (2).jpg';
+import img9 from '../assets/images/productos/RATON .jpg';
+import img10 from '../assets/images/productos/RATON.jpg';
+import img11 from '../assets/images/productos/leprechaun.jpg';
+import img12 from '../assets/images/productos/leprechaun2.jpg';
+import img13 from '../assets/images/productos/llaveroStitch.jpg';
+import img14 from '../assets/images/productos/miniatura (2).jpg';
+import img15 from '../assets/images/productos/personalizados.jpg';
+import img17 from '../assets/images/productos/prendedor.jpg';
+import img18 from '../assets/images/productos/raton(4).jpg';
 
 export const products: Product[] = [
   // Polaroids (7 productos - usando tus imágenes)
   {
     id: 1,
-    name: "Cuadro Deco Souvenirs",
+    name: "Aros",
     image: img1,
-    description: "SOUVENIRS PERSONALIZADOS DE VIDRIO Y MADERA medida 10x13cm",
+    description: "",
     featured: true
   },
   {
     id: 2,
-    name: "Cuadro",
-    image: img1,
-    description: "Ideal para souvenires de boda, cumpleaños, etc.",
+    name: "Aros",
+    image: img2,
+    description: "",
     featured: true
   },
   {
     id: 3,
-    name: "Tu Historia en Fotos",
-    image: img1,
-    description: "Personaliza tu cuadro con fotos de tus recuerdos"
+    name: "Gato",
+    image: img3,
+    description: ""
   },
   {
     id: 4,
-    name: "Polaroid Iman-Souvenir,6 unidades",
-    image: img1,
-    description: "Se hace precio por mayor!"
+    name: "Gatos",
+    image: img4,
+    description: ""
   },
   {
     id: 5,
-    name: "Cuadro de Madera Barnizada con vidrio",
-    image : img1,
-    description: "con frases o simple"
+    name: "Miniatura",
+    image : img5,
+    description: ""
   },
   {
     id: 6,
-    name: "Polaroid 8x5, 12 unidades",
-    image: img1,
-    description: "Llevando mas cantidad el precio es menor!",
+    name: "Ratones",
+    image: img7,
+    description: "",
     featured: true
   },
   {
     id: 7,
-    name: "Polaroid clásicas 10x10",
-    image: img1,
-    description: "llevando mas cantidad el precio es menor!"
+    name: "Raton Personalizado",
+    image: img8,
+    description: ""
   },
-
-  // Stickers (6 productos)
   {
     id: 8,
-    name: "Polar scuare 9x8 6 unidades",
-    image: img1,
-    description: "6 unidades,consultar por combos!."
+    name: "Raton Personalizado",
+    image: img9,
+    description: ""
   },
   {
     id: 9,
-    name: "Polaroid 10x7 8 unidades",
-    image: img1,
-    description: "llevando mas cantidad el precio es menor!"
+    name: "Raton Personalizado",
+    image: img10,
+    description: ""
   },
   {
     id: 10,
-    name: "Cuadro Deco",
-    image: img1,
-    description: "totalmente personalizado.ideal para regalar o decorar",
+    name: "Leprechaun",
+    image: img11,
+    description: "",
     featured: true
   },
   {
     id: 11,
-    name: "BOX",
-    image: img1,
-    description: "caja box rectangular,totalmente personalizable"
+    name: "Leprechaun",
+    image: img12,
+    description: ""
   },
   {
     id: 12,
-    name: "Cuadro Dia de la Madre",
-    image: img1,
-    description: "Regalo del dia de la madre"
+    name: "Llavero Stitch",
+    image: img13,
+    description: ""
   },
   {
     id: 13,
-    name: "Cuadro Deco XXL",
-    image: img1,
-    description: "Cuadro vidrio 4mm de 30x17cm + base de madera"
+    name: "Miniatura",
+    image: img14,
+    description: ""
   },
 
   // Cuadros (7 productos)
   {
     id: 14,
-    name: "Cuadro Deco XL",
-    image: img1,
-    description: "Cuadro con el mapa del cielo de tu fecha especial. Tamaño 30x40cm.",
+    name: "Personalizado",
+    image: img15,
+    description: "",
     featured: true
   },
   {
     id: 15,
-    name: "Porta Retrato 13x18",
-    image: img1,
-    description: "plantilla personalizada o foto a elección"
+    name: "Prendedor",
+    image: img17,
+    description: ""
   },
   {
     id: 16,
-    name: "kit stickers",
-    image: img1,
-    description: "plancha a4 de stickers"
+    name: "Raton",
+    image: img18,
+    description: ""
   },
-  {
-    id: 17,
-    name: "Calendarios por Mayor",
-    image: img1,
-    description: "impresión premium"
-  },
-  {
-    id: 18,
-    name: "Porta Retrato Premium",
-    image: img1,
-    description: "portaretrato a elección"
-  },
-  {
-    id: 19,
-    name: "Cuadro Día del Padre",
-    image: img1,
-    description: "regala lo mejor para tu papá"
-  },
-  {
-    id: 20,
-    name: "Clásicos Todo tipo de medida",
-    image: img1, // Reutilizando primera imagen
-    description: "todo tipo de medida!!",
-    featured: true
-  },
-  {
-    id: 21,
-    name: "Kit emprendedores - Pack de 24 y 35 unidades",
-    image: img1,
-    description: "Stickers redondos de 4 y 4,5 cm de diámetro"
-  }
 ];
 
 export const getProductsByCategory = (category: Product['category']) => {
