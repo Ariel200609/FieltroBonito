@@ -6,7 +6,7 @@ import heroImage from '../assets/images/hero/Hero.webp';
 import logoAmorEstelar from '../assets/images/logo/logoAmorEstelar.webp';
 
 const HeroSection: React.FC = () => {
-  const whatsappNumber = "5492915277900";
+  const whatsappNumber = "5492914277746";
 
   const handleCatalogClick = () => {
     const message = encodeURIComponent("¡Hola! 🌟 Me gustaría ver su catálogo completo con todas las variedades de productos que ofrecen. ¡Gracias! 💗");

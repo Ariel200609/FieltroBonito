@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Image from '../assets/images/talleres/TALLER BORDADO SOBRE FOTOS (1).jpg';
 import Image2 from '../assets/images/talleres/TALLER BORDADO SOBRE FOTOS.jpg';
 import Image3 from '../assets/images/talleres/TALLER DIA DE LA MADRE.jpg';
 import Image4 from '../assets/images/talleres/TALLER PUNTOS SIMPLES.jpg';
 
 const talleres = [
-    {
-        imagen: Image,
-        descripcion: "Taller de bordado sobre fotos.",
-    },
     {
         imagen: Image2,
         descripcion: "Taller de bordado sobre fotos.",

@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   const menuItems = [
     { id: 'hero', label: 'Inicio', icon: <FiHeart size={18} /> },
-    { id: 'services', label: 'Servicios', icon: <HiSparkles size={18} /> },
+    { id: 'services', label: 'Mi historia', icon: <HiSparkles size={18} /> },
     { id: 'products', label: 'Productos', icon: <FiFilter size={18} /> },
     { id: 'contact', label: 'Contacto', icon: <FiHeart size={18} /> },
   ];
