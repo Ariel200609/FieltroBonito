@@ -1,178 +1,122 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiHeart } from 'react-icons/fi';
-import { HiSparkles } from 'react-icons/hi';
-import logoAmorEstelar from '../assets/images/logo/logoAmorEstelar.webp';
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { FiHeart } from "react-icons/fi";
+import logoAmorEstelar from "../assets/images/logo/logoAmorEstelar.webp";
 
 interface SplashScreenProps {
   onComplete: () => void;
 }
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
+  useEffect(() => {
+    // Aumentamos el tiempo total antes de desaparecer el splash
+    const timer = setTimeout(() => onComplete(), 5000);
+    return () => clearTimeout(timer);
+  }, [onComplete]);
+
   return (
-    <motion.div
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0, scale: 1.1 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-amor-purple via-amor-pink to-purple-400"
-      onAnimationComplete={() => {
-        setTimeout(onComplete, 100);
-      }}
-    >
-      {/* Partículas de fondo */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ 
-              opacity: 0,
-              scale: 0,
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{ 
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 2,
-              delay: Math.random() * 1.5,
-              repeat: Infinity,
-              repeatDelay: Math.random() * 2,
-            }}
-            className="absolute"
-          >
-            <HiSparkles 
-              className="text-white/30" 
-              size={Math.random() * 20 + 10} 
-            />
-          </motion.div>
-        ))}
-      </div>
+    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-[#ADC9B8] overflow-hidden">
+      {/* Cortinas izquierda y derecha */}
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: "-100%" }}
+        transition={{ delay: 3.7, duration: 1.4, ease: "easeInOut" }}
+        className="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-br from-[#ADC9B8] to-[#C4D4A4] shadow-2xl rounded-r-[60px]"
+      ></motion.div>
 
-      {/* Contenido principal */}
-      <div className="relative text-center text-white">
-        {/* Logo animado */}
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: "100%" }}
+        transition={{ delay: 3.7, duration: 1.4, ease: "easeInOut" }}
+        className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-bl from-[#ADC9B8] to-[#C4D4A4] shadow-2xl rounded-l-[60px]"
+      ></motion.div>
+
+      {/* Corazones flotando */}
+      {[...Array(12)].map((_, i) => (
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ 
-            duration: 0.8,
-            type: "spring",
-            stiffness: 200,
-            damping: 15
+          key={i}
+          initial={{
+            y: Math.random() * window.innerHeight,
+            x: Math.random() * window.innerWidth,
+            opacity: 0,
+            scale: 0.7,
           }}
-          className="mb-6"
+          animate={{
+            y: [Math.random() * 100, -50],
+            opacity: [0.2, 1, 0],
+            scale: [0.7, 1, 0.8],
+          }}
+          transition={{
+            duration: 4 + Math.random() * 2,
+            repeat: Infinity,
+            delay: Math.random() * 2,
+          }}
+          className="absolute text-[#6FA088]/40"
         >
-          <motion.div
-            animate={{ 
-              rotate: [0, 10, -10, 0],
-              scale: [1, 1.05, 1]
-            }}
-            transition={{ 
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="relative"
-          >
-            <img
-              src={logoAmorEstelar}
-              alt="Amor Estelar"
-              className="w-24 h-24 mx-auto rounded-full shadow-2xl"
-            />
-            
-            
-          </motion.div>
+          <FiHeart size={28} />
         </motion.div>
+      ))}
 
-        {/* Título principal */}
+      {/* Contenido central */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="relative text-center z-10"
+      >
+        <motion.img
+          src={logoAmorEstelar}
+          alt="Amor Estelar"
+          initial={{ scale: 0 }}
+          animate={{ scale: [0, 1.1, 1] }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+          }}
+          className="w-28 h-28 mx-auto rounded-full shadow-lg border-4 border-[#C4D4A4]"
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-4xl md:text-6xl font-bold mb-4"
+          transition={{ delay: 0.8, duration: 1 }}
+          className="text-4xl md:text-6xl font-bold text-[#6FA088] mt-6"
         >
+          Bienvenido a{" "}
           <motion.span
-            animate={{ 
+            animate={{
               textShadow: [
-                "0 0 20px rgba(255,255,255,0.5)",
-                "0 0 40px rgba(255,255,255,0.8)",
-                "0 0 20px rgba(255,255,255,0.5)"
-              ]
+                "0 0 10px rgba(175,201,184,0.6)",
+                "0 0 25px rgba(196,212,164,0.9)",
+                "0 0 10px rgba(175,201,184,0.6)",
+              ],
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            Fieltro Bonito
+            Fieltro Bonito 🌿
           </motion.span>
         </motion.h1>
 
-        {/* Subtítulo */}
-        <motion.div
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex items-center justify-center space-x-2 mb-8"
+          transition={{ delay: 1.3, duration: 1 }}
+          className="text-lg md:text-xl text-[#6FA088] mt-2 font-light"
         >
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <FiHeart size={24} />
-          </motion.div>
-          <p className="text-xl md:text-2xl font-light">
-            Imprimimos y personalizamos tus recuerdos
-          </p>
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
-          >
-            <FiHeart size={24} />
-          </motion.div>
-        </motion.div>
+          Cada manualidad realizada con mucho amor 💚
+        </motion.p>
 
-        {/* Indicador de carga */}
+        {/* Corazón palpitante */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.3 }}
-          className="flex flex-col items-center space-y-4"
+          animate={{ scale: [1, 1.3, 1] }}
+          transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+          className="mt-6 flex justify-center"
         >
-          {/* Barra de progreso */}
-          <div className="w-48 h-1 bg-white/20 rounded-full overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 1.2, delay: 1, ease: "easeOut" }}
-              className="h-full bg-white rounded-full"
-            />
-          </div>
-
-          {/* Texto de carga */}
-          <motion.p
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="text-sm font-light tracking-wider"
-          >
-            Cargando tu tienda de recuerdos...
-          </motion.p>
+          <FiHeart size={40} className="text-[#6FA088] drop-shadow-lg" />
         </motion.div>
-
-        {/* Efecto de brillos */}
-        <motion.div
-          animate={{
-            background: [
-              "radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 40% 40%, rgba(255,255,255,0.1) 0%, transparent 50%)"
-            ]
-          }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="absolute inset-0 pointer-events-none"
-        />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
