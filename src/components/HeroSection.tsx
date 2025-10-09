@@ -129,7 +129,7 @@ const HeroSection: React.FC = () => {
             className="group bg-brown-300 text-amor-purple px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center"
           >
             <FiCamera className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
-            Ver Catálogo Completo
+            Ver catálogo (vía Whatsapp)
           </motion.button>
           
           <motion.button
